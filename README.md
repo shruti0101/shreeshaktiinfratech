@@ -34,3 +34,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Blog Backend + Admin Quickstart
+
+1. Copy `.env.example` to `.env.local` and set values:
+
+```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=change_me
+```
+
+2. Start your MongoDB instance, then run the dev server:
+
+```
+npm run dev
+```
+
+3. Use the following API endpoints:
+
+- `POST /api/auth/signup` { username, email, password }
+- `POST /api/auth/login` { email, password }
+- `POST /api/auth/logout`
+- `GET /api/blogs`
+- `POST /api/blogs` (requires auth cookie)
+- `GET /api/blogs/:id`
+- `PUT /api/blogs/:id` (requires auth cookie)
+- `DELETE /api/blogs/:id` (requires auth cookie)
+
+4. Admin pages (protected by cookie):
+
+- `/admin/login` – login form
+- `/admin` – dashboard with posts list
+- `/admin/blogs/new` – create post
+- `/admin/blogs/[id]` – edit/delete post
+
+Notes:
+
+- Admin protection is cookie-based via `middleware.js` and JWT.
+- Ensure `MONGO_URI` is reachable from the app.

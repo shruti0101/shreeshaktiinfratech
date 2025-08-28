@@ -27,14 +27,14 @@ const testimonials = [
 
 const ClientsSpeak = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="max-w-full bg-[#666666] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       {/* Left Section */}
       <div>
-        <p>Testimonials</p>
-        <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        <p className="text-white">Testimonials</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
           Our Clients <span className="text-[#FAAC18]">Speak</span>
         </h2>
-        <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+        <p className="mt-6 text-lg text-white leading-relaxed">
           Discover how our bar bending machines have helped businesses achieve
           precision, efficiency, and lasting results — straight from the people
           who use them every day.

@@ -59,7 +59,7 @@ const Check = () => {
             data-aos-duration="1200"
           >
             <img
-              src="/product.png"
+              src="/home/smog-gun.webp"
               alt="Machine Right"
               className="w-[300px] md:w-[400px] drop-shadow-2xl relative z-20"
             />

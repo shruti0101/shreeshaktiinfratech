@@ -7,13 +7,13 @@ export default function AboutSection() {
 
     <>
 <AOSWrapper>
-  <section className="relative bg-white overflow-hidden">
+  <section className="relative bg-[#FFFAF1] overflow-hidden">
     <div
-      className="max-w-7xl mt-8 md:mt-0 mx-auto px-6 md:px-12  grid grid-cols-1 md:grid-cols-2 gap-7 items-center"
+      className="max-w-7xl  mt-8 md:mt-0 mx-auto px-6 md:px-12  grid grid-cols-1 md:grid-cols-2  items-center"
     >
       {/* Background Rectangle */}
       <Image
-        src="/about-rect.jpg"
+        src="/home/about-rect.webp"
         width={500}
         height={500}
         alt="Background rectangle"
@@ -89,7 +89,7 @@ export default function AboutSection() {
     </div>
 
     {/* Bottom Cards */}
-    <div className="hidden md:grid relative mx-auto  max-w-7xl grid-cols-1 md:grid-cols-3 gap-6 px-4">
+    <div className="hidden md:grid relative mx-auto mb-4 max-w-7xl grid-cols-1 md:grid-cols-3 gap-6 px-4">
       {/* Card 1 */}
       <div
         className="group border border-gray-300 flex flex-col items-center text-center p-6 bg-white shadow rounded-lg transition-all duration-300 hover:bg-[#FAAC18]"

@@ -171,7 +171,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
         © 2022 Shree Shakti Infratech, All Rights Reserved. Managed and Developed By{" "}
-        <a href="#" className="text-[#FAAC18] hover:underline">
+        <a href="https://promozionebranding.com/" className="text-[#FAAC18] hover:underline">
           Promozione Branding Pvt Ltd.
         </a>
       </div>

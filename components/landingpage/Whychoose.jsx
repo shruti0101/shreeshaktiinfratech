@@ -41,11 +41,11 @@ const features = [
 
   return (
     <div>
-      
+
 <section
-  className="relative bg-fixed bg-center bg-cover mt-25 md:mt-0 md:py-20"
+  className="relative bg-fixed bg-center bg-cover mt-25 md:mt-0 md:py-15"
   style={{
-    backgroundImage: "url('/bg.webp')",
+    backgroundImage: "url('/home/whychoose/bg.webp')",
   }}
 >
   {/* Dark Overlay */}
@@ -86,7 +86,7 @@ const features = [
             alt="Rebar Machine"
             width={140}
             height={120}
-            className="rounded-lg shadow-xl"
+            className=""
           />
         </div>
       </div>

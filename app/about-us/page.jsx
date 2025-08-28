@@ -232,7 +232,7 @@ const Page = () => {
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 pt-10 md:pt-16">
-          <h2 className="text-3xl md:text-6xl font-extrabold text-white drop-shadow-lg text-center animate-fade-in">
+          <h2 className="text-3xl mt-10 md:text-6xl font-extrabold text-white drop-shadow-lg text-center animate-fade-in">
             Our Vision
           </h2>
         </div>
@@ -243,7 +243,7 @@ const Page = () => {
           alt="Quote Icon"
           className="absolute left-3 top-3 md:left-8 md:top-8 w-12 h-12 md:w-20 md:h-20"
         />
-        <div className="relative z-10 mt-6 md:mt-12 mx-auto flex items-center justify-center px-4 md:px-10">
+        <div className="relative z-10 mt-6 md:mt-8 mx-auto flex items-center justify-center px-4 md:px-10">
           <p className="text-base md:text-xl leading-relaxed text-center max-w-4xl text-white">
             At <span className="text-[#FAAC18]">Shree Shakti Infratech</span>,
             our vision is to set new benchmarks in the construction machinery

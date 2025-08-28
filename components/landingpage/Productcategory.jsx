@@ -14,7 +14,7 @@ const Productcategory = () => {
       name: "Concrete Mixers",
       products: 14,
       img: "/home/productdesc/productdesc2.webp",
-      hoverImg: "/twoleg.webp",
+      hoverImg: "/home/productdesc/actual/concrete.webp",
     },
     {
       name: "Trolly Vibrator",
@@ -64,7 +64,8 @@ const Productcategory = () => {
         {categories.map((cat, i) => (
           <div
             key={i}
-            className="bg-[#EFEFEF] border-2 border-gray-800 hover:border-[#FAAC18] hover:scale-105 flex flex-col items-center justify-center p-2 text-center shadow-sm hover:shadow-md transition group"
+            className="bg-[#EFEFEF] border-2 border-gray-800 hover:border-[#FAAC18] hover:scale-105 flex flex-col items-center justify-center p-2 text-center shadow-sm hover:shadow-md transiti
+            on group"
           >
             {/* Image container with hover switch */}
             <div className="w-32 h-32 flex items-center justify-center mb-3 relative">
@@ -72,7 +73,7 @@ const Productcategory = () => {
               <Image
                 src={cat.img}
                 alt={cat.name}
-                width={100}
+                width={200}
                 height={100}
                 className="object-contain w-full h-full transition-opacity duration-300 group-hover:opacity-0"
               />
@@ -80,9 +81,9 @@ const Productcategory = () => {
               <Image
                 src={cat.hoverImg}
                 alt={cat.name}
-                width={100}
-                height={100}
-                className="object-contain w-full h-full absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                width={400}
+                height={200}
+                className="object-cover w-full h-full absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               />
             </div>
 

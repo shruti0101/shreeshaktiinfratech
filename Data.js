@@ -1,5 +1,5 @@
 export const categories = [
-  { id: "bar-machines", name: "Bar Machines" },
+  { id: "bar-processing-machines", name: "Bar Processing Machines" },
   { id: "cutting-tools", name: "Cutting Tools" },
   { id: "welding", name: "Welding Machines" },
 ];
@@ -7,53 +7,132 @@ export const categories = [
 export const products = [
   {
     id: 1,
-    slug: "rebar-bender-500",
-    name: "Rebar Bender 500",
-    category: "bar-machines",
+    slug: "automatic-bar-bender",
+    name: "Automatic Bar Bender ",
+    category: "bar-processing-machines",
     model: "RB-600",
     image: {
-      src: "/products/aboutimg.webp",
-      alt: "Rebar Bender 500 machine front view",
+      src: "/products/automaticbarmachine.png",
+      alt: "Automatic Bar Bender",
     },
     images: [
-      { src: "/products/rebar-bender/1.jpg", alt: "Rebar Bender 500 side view" },
-      { src: "/products/rebar-bender/2.jpg", alt: "Rebar Bender 500 bending operation" },
-      { src: "/products/rebar-bender/3.jpg", alt: "Rebar Bender 500 in construction site" },
+      {
+        src: "/products/rebar-bender/1.jpg",
+        alt: "Rebar Bender 500 side view",
+      },
+      {
+        src: "/products/rebar-bender/2.jpg",
+        alt: "Rebar Bender 500 bending operation",
+      },
+      {
+        src: "/products/rebar-bender/3.jpg",
+        alt: "Rebar Bender 500 in construction site",
+      },
     ],
-    description: "High-quality rebar bending machine for construction projects.",
+description: [
+  { type: "h2", text: "Overview" },
+  { type: "p", text: "Durable cutting saw for industrial use. Designed for heavy-duty projects with <strong>long-lasting build</strong> Durable cutting saw for industrial use. Designed for heavy-duty projects with.Durable cutting saw for industrial use. Designed for heavy-duty projects with" },
+  
+  { type: "h2", text: "Features" },
+  { type: "ul", items: [
+      "High precision: Ensures accurate cuts",
+      "Long-lasting build: Industrial-grade materials"
+    ] }
+],
     specs: [
-      { label: "Power", value: "5 HP" },
-      { label: "Bending Capacity", value: "32mm" },
-      { label: "Weight", value: "320kg" },
-      { label: "Voltage", value: "415V" },
+      { label: "Bar Dimensions", value: "8mm to 32mm" },
+      { label: "Model Name/Number", value: "SSI GW 42" },
+      { label: "Max Bending Radius", value: "32MM" },
+      { label: "Power Source", value: "Electric" },
+      { label: "Max Bending Angle", value: "32" },
+      { label: "Motor Speed", value: "2800" },
+      { label: "Machine Weight", value: "270 KG" },
+      { label: "TMT Bar Steel Dia.", value: "5 hp" },
+      { label: "Gear Oil", value: "90 no." },
+       { label: "Voltage", value: "440 volt" },
     ],
     metaTitle: "Rebar Bender 500 - High-Quality Construction Equipment",
     metaDescription:
       "Buy Rebar Bender 500 for efficient and precise rebar bending in construction projects. Durable, reliable, and best price available.",
   },
+
   {
     id: 2,
-    slug: "cutting-saw-300",
-    name: "Cutting Saw 300",
-    category: "cutting-tools",
-    model: "CS-300",
+    slug: "automatic-bar-bending-machine",
+    name: "Automatic Bar Bending Machine",
+    category: "bar-processing-machines",
+    model: "SSI GW 42",
+    size: "32mm,40mm",
     image: {
-      src: "/products/cutting-saw/main.jpg",
-      alt: "Cutting Saw 300 front view",
+      src: "/products/automaticbarmachine.png",
+      alt: "Automatic Bar Bending Machine front view",
     },
     images: [
-      { src: "/products/cutting-saw/1.jpg", alt: "Cutting Saw 300 side view" },
-      { src: "/products/cutting-saw/2.jpg", alt: "Cutting Saw 300 blade close-up" },
+      {
+        src: "/products/automaticmachine2.png",
+        alt: "Automatic Bar Bending Machine side view",
+      },
+      {
+        src: "/products/automaticmachine3.png",
+        alt: "Automatic Bar Bending Machine blade close-up",
+      },
+      {
+        src: "/products/automaticmachine1.png",
+        alt: "Automatic Bar Bending Machine blade close-up",
+      },
     ],
-    description: "Durable cutting saw for industrial use.",
+description: [
+  { type: "h2", text: "Overview" },
+  { type: "p", text: "Durable cutting saw for industrial use. Designed for heavy-duty projects with <strong>long-lasting build</strong> Durable cutting saw for industrial use. Designed for heavy-duty projects with.Durable cutting saw for industrial use. Designed for heavy-duty projects with" },
+  
+  { type: "h2", text: "Features" },
+  { type: "ul", items: [
+      "High precision: Ensures accurate cuts",
+      "Long-lasting build: Industrial-grade materials"
+    ] }
+],
+
     specs: [
-      { label: "Blade Size", value: "300mm" },
-      { label: "Power", value: "3 HP" },
-      { label: "Voltage", value: "220V" },
+          { label: "Bar Dimensions", value: "8mm to 32mm" },
+      { label: "Model Name/Number", value: "SSI GW 42" },
+      { label: "Max Bending Radius", value: "32MM" },
+      { label: "Power Source", value: "Electric" },
+      { label: "Max Bending Angle", value: "32" },
+      { label: "Motor Speed", value: "2800" },
+      { label: "Machine Weight", value: "270 KG" },
+      { label: "TMT Bar Steel Dia.", value: "5 hp" },
+      { label: "Gear Oil", value: "90 no." },
+       { label: "Voltage", value: "440 volt" },
     ],
     metaTitle: "Cutting Saw 300 - Durable Industrial Cutting Tool",
     metaDescription:
       "Order Cutting Saw 300 for precise and durable cutting operations. Perfect for industrial and heavy-duty projects.",
   },
-  // ... more products
+
+  
+  {
+    id: 3,
+    slug: "rebar-bender-700",
+    name: "Rebar Bender 700",
+    category: "bar-machines", // same as Rebar Bender 500
+    model: "RB-700",
+    image: {
+      src: "/products/rebar-bender700/main.jpg",
+      alt: "Rebar Bender 700",
+    },
+    images: [],
+   description: [
+  { type: "h2", text: "Overview" },
+  { type: "p", text: "Durable cutting saw for industrial use. Designed for heavy-duty projects with <strong>long-lasting build</strong> Durable cutting saw for industrial use. Designed for heavy-duty projects with.Durable cutting saw for industrial use. Designed for heavy-duty projects with" },
+  
+  { type: "h2", text: "Features" },
+  { type: "ul", items: [
+      "High precision: Ensures accurate cuts",
+      "Long-lasting build: Industrial-grade materials"
+    ] }
+],
+    specs: [{ label: "Power", value: "7.5 HP" }],
+    metaTitle: "Rebar Bender 700",
+    metaDescription: "Heavy-duty rebar bending machine.",
+  },
 ];

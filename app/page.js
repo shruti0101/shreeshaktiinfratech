@@ -15,9 +15,12 @@ import Testimonials from "@/components/landingpage/Testimonials";
 import Stickybutton from "@/components/landingpage/Stickybutton";
 import Productcategory from "@/components/landingpage/Productcategory";
 import Check from "@/components/landingpage/Check";
+import Popup from "@/components/Popup";
 export default function Home() {
   return (
     <>
+
+    <Popup></Popup>
       <AccordionHero></AccordionHero>
       <Stickybutton></Stickybutton>
     

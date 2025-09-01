@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[400px] md:h-[650px] flex items-center justify-center overflow-hidden">
         {/* Background with parallax style */}
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover"
@@ -16,7 +16,7 @@ const page = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-yellow-600/40" />
 
           <Image
-            className="hidden md:block absolute  right-38 z-1000 animate-bounce top-10"
+            className="hidden md:block absolute  right-38 z-100 animate-bounce top-30"
             src="/home/round.png"
             alt="Round Image"
             width={150}
@@ -25,13 +25,13 @@ const page = () => {
         </div>
 
         {/* Content Box */}
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-16">
+        <div className="relative  pt-18 z-10 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-16">
           {/* Text Content */}
           <div className="text-center md:text-left">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg">
-              Transform Your <br />
+           Contact {" "}
               <span className="text-[#FAAC18] relative inline-block animate-pulse">
-                Business
+             Us
                 <span className="absolute left-0 -bottom-2 w-full h-1 bg-[#FAAC18] rounded-full "></span>
               </span>
             </h2>

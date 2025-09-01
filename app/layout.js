@@ -16,12 +16,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
       <body className={`${roboto.variable} font-sans antialiased`}>
-        <Navbar />  
+     
+        <Navbar />
         <main>{children}</main>
-        <Footer />   
+        <Footer />
       </body>
     </html>
   );

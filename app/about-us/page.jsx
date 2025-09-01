@@ -80,7 +80,7 @@ const Page = () => {
 
 
   <AOSWrapper>
-      <section className="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[400px] md:h-[650px] flex items-center justify-center overflow-hidden">
         {/* Background with parallax style */}
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover"
@@ -88,7 +88,7 @@ const Page = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-yellow-600/40" />
           <Image
-            className="hidden md:block absolute right-38 z-1000 animate-bounce top-10"
+            className="hidden md:block absolute right-38 z-100 animate-bounce top-33"
             src="/home/round.png"
             alt="Round Image"
             width={150}
@@ -97,7 +97,7 @@ const Page = () => {
         </div>
 
         {/* Content Box */}
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-16">
+        <div className="relative pt-18 z-10 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-16">
           {/* Text Content */}
           <div
             className="text-center md:text-left"

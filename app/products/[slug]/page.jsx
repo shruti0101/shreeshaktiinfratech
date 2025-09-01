@@ -38,6 +38,8 @@ export default function ProductPage({ params }) {
 
   if (!product) return <p className="p-10">Product not found</p>;
 
- 
-  return <ProductDetailClient product={product} />;
+  const relatedProducts = products
+    .filter((p) => p.category === product.category && p.slug !== product.slug)
+    .slice(0, 8); // limit to 8 (adjust as needed)
+  return <ProductDetailClient product={product} relatedProducts={relatedProducts} />;
 }

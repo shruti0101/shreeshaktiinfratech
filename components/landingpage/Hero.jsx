@@ -55,7 +55,7 @@ const AccordionHero = () => {
   // ✅ Mobile view → Swiper Carousel with autoplay
   if (isMobile) {
     return (
-      <div className="h-[60vh] w-full">
+      <div className="h-[68vh] w-full">
         <Swiper
           spaceBetween={10}
           slidesPerView={1}
@@ -68,14 +68,14 @@ const AccordionHero = () => {
         >
           {images.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="relative h-[60vh] w-full">
+              <div className="relative  h-[68vh] w-full">
                 <img
                   src={item.src}
                   alt={item.title}
                   className="absolute inset-0 h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 flex flex-col justify-center items-start h-full px-6 text-white">
+                <div className="absolute  inset-0 bg-black/40" />
+                <div className="relative pt-20 z-10 flex flex-col justify-center items-start h-full px-6 text-white">
                   <h2 className="text-4xl font-bold mb-2">{item.title}</h2>
                   <p className="text-3xl text-[#FAAC18] font-semibold">
                     {item.subtitle}
@@ -105,7 +105,7 @@ const AccordionHero = () => {
 
   // ✅ Desktop view → Accordion effect
   return (
-    <div className="flex h-[86vh] w-full overflow-hidden">
+    <div className="flex h-[100vh] w-full overflow-hidden">
       {images.map((item) => (
         <div
           key={item.id}
@@ -136,7 +136,7 @@ const AccordionHero = () => {
             <p className="absolute text-lg text-[#FAAC18] -left-20 -rotate-90">
               GST No. 07BPIPM2937L1ZG
             </p>
-            <div className="ml-10">
+            <div className="ml-10 pt-20">
               <h2 className="text-4xl md:text-7xl font-bold mb-3">
                 {active === item.id && item.id === 1 ? ( // only first image
                   <Typewriter

@@ -1,25 +1,17 @@
-
 import mongoose from "mongoose";
 
-const blogSchema = new mongoose.Schema({
-  title: {
-     type: String, 
-     required: true 
-    },
-  description: { 
-     type: String, 
-     required: true 
-    },
-    image: { 
-         type: String, 
-         required: true 
-        },
-  date: { 
-     type: Date, 
-     default: Date.now 
-    },
-});
+const BlogSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    permalink: { type: String, required: true, unique: true },
+    content: { type: String, required: true },
+    image: { type: String },          
+    imageFileId: { type: String },    
+    metaTitle: { type: String },
+    metaDescription: { type: String }
+  },
+  { timestamps: true }
 
-const Blog = mongoose.models.blog || mongoose.model("blog", blogSchema);
+);
 
-export default Blog;
+export default mongoose.models.Blog || mongoose.model("Blog", BlogSchema);

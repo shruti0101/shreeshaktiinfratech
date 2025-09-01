@@ -13,6 +13,8 @@ export async function generateMetadata({ params }) {
   }
 
   return {
+
+    
     title: product.metaTitle || product.name,
     description: product.metaDescription || product.description,
     openGraph: {

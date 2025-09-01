@@ -16,10 +16,11 @@ import Stickybutton from "@/components/landingpage/Stickybutton";
 import Productcategory from "@/components/landingpage/Productcategory";
 import Check from "@/components/landingpage/Check";
 import Popup from "@/components/Popup";
+import Footer from "@/components/landingpage/Footer";
 export default function Home() {
   return (
     <>
-
+        <Navbar />
     <Popup></Popup>
       <AccordionHero></AccordionHero>
       <Stickybutton></Stickybutton>
@@ -37,6 +38,7 @@ export default function Home() {
       <Testimonials></Testimonials>
       <Faq></Faq>
       <Cta2></Cta2>
+           <Footer />
     
     </>
   );

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Whychoose from "@/components/landingpage/Whychoose";
 import AOSWrapper from "@/components/aos/AOSWrapper";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/landingpage/Footer";
 // ✅ Moved outside component to avoid re-creation on every render
 const products = [
   {
@@ -77,7 +79,7 @@ const Page = () => {
     <>
       {/* Hero Section */}
     
-
+<Navbar></Navbar>
 
   <AOSWrapper>
       <section className="relative w-full h-[400px] md:h-[650px] flex items-center justify-center overflow-hidden">
@@ -418,6 +420,8 @@ const Page = () => {
           </p>
         </div>
       </section>
+
+      <Footer></Footer>
     </>
   );
 };

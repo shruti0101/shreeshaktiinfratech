@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { categories, products } from "@/Data";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/landingpage/Footer";
 
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -29,9 +31,12 @@ export default function ProductsPage() {
 
   return (
     <>
+
+    <Navbar></Navbar>
       <section className="relative w-full h-[400px] md:h-[450px] flex items-center justify-center overflow-hidden">
         {/* Background with parallax style */}
         {/* Background with parallax style */}
+
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover flex items-center justify-center"
           style={{ backgroundImage: "url('/home/hero1.webp')" }}
@@ -39,6 +44,9 @@ export default function ProductsPage() {
           <h1 className="text-7xl font-bold text-white z-10">Products</h1>
         </div>
       </section>
+
+      
+    <svg className="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FEF3C7" fill-opacity="1" d="M0,192L360,32L720,160L1080,96L1440,192L1440,0L1080,0L720,0L360,0L0,0Z"></path></svg>
 
       <section className="px-6 py-10">
         {/* Filter Bar */}
@@ -65,7 +73,7 @@ export default function ProductsPage() {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+        <div className="grid grid-cols-1 mt-25 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
           {filteredProducts.slice(0, visibleCount).map((product) => (
             <Link
               key={product.id}
@@ -111,6 +119,8 @@ export default function ProductsPage() {
           </div>
         )}
       </section>
+
+      <Footer></Footer>
     </>
   );
 }

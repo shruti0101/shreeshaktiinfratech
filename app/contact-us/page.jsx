@@ -2,10 +2,13 @@
 
 import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/landingpage/Footer";
 const page = () => {
   return (
     <div>
+      
+      <Navbar></Navbar>
       {/* Hero Section */}
       <section className="relative w-full h-[400px] md:h-[650px] flex items-center justify-center overflow-hidden">
         {/* Background with parallax style */}
@@ -174,7 +177,9 @@ const page = () => {
           />
         </div>
       </section>
+      <Footer></Footer>
     </div>
+
   );
 };
 

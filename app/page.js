@@ -10,7 +10,7 @@ import Barbending from "@/components/landingpage/Barbending";
 import Faq from "@/components/landingpage/Faq";
 import Cta2 from "@/components/landingpage/Cta2";
 import Testimonials from "@/components/landingpage/Testimonials";
-
+import Youtube from "@/components/landingpage/Youtube";
 
 import Stickybutton from "@/components/landingpage/Stickybutton";
 import Productcategory from "@/components/landingpage/Productcategory";
@@ -35,6 +35,7 @@ export default function Home() {
       <Process></Process>
            <Check></Check>
       <Barbending></Barbending>
+      <Youtube></Youtube>
       <Testimonials></Testimonials>
       <Faq></Faq>
       <Cta2></Cta2>

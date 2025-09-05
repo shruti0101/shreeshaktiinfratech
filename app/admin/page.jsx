@@ -31,20 +31,20 @@ export default function AdminDashboard() {
       {/* Main content */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <header className="h-16 bg-white flex items-center justify-between px-6 shadow">
+        <header className="h-16 bg-white flex items-center justify-end px-6 shadow">
           <h1 className="text-xl font-bold">Dashboard 📊</h1>
           <div>{/* Profile / Logout button later */}</div>
         </header>
 
         {/* Page Content */}
         <main className="p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-semibold ">Manage Blogs 🗂️</h2>
+          <div className=" mb-6">
+            <h2 className="text-4xl mb-10 font-semibold text-center ">Manage Blogs 🗂️</h2>
           
           </div>
 
           {loading ? (
-            <p>Loading...</p>
+            <p className="p-6 text-center text-gray-500 text-4xl">Loading...</p>
           ) : blogs.length === 0 ? (
             <p className="text-gray-600">No blogs found.</p>
           ) : (

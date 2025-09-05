@@ -5,60 +5,87 @@ import Whychoose from "@/components/landingpage/Whychoose";
 import AOSWrapper from "@/components/aos/AOSWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/landingpage/Footer";
+import Link from "next/link";
 // ✅ Moved outside component to avoid re-creation on every render
 const products = [
-  {
-    id: 1,
-    badge: "Best Seller",
-    name: "STEEL BAR BENDING MACHINE",
-    image: "/steel.webp",
-    details: {
-      "Bending Range": "8mm to 32mm",
-      "Motor Power": "3kw",
-      "Motor Speed": "2800",
-      Voltage: "380Volt",
-      "Total Weight": "270 KG (Approx)",
-    },
+{
+  id: 1,
+  badge: "Best Seller",
+  name: "Automatic Bar Bending Machine 32-40 MM",
+  image: "/products/bpm/Automatic Bar Bender/1.webp",
+  details: {
+    "Bar Dimensions": "8mm to 32mm",
+    "Model Name/Number": "SSI GW 42",
+    "Max Bending Radius": "32MM",
+    "Power Source": "Electric",
+    "Max Bending Angle": "32",
+    "Motor Speed": "2800",
+    "Machine Weight": "270 KG",
+    "TMT Bar Steel Dia.": "5 hp",
+    "Gear Oil": "90 no.",
+    "Voltage": "440 volt",
   },
-  {
-    id: 2,
-    badge: "Hot Deal",
-    name: "STEEL BAR CUTTING MACHINE",
-    image: "/feature1.webp",
-    details: {
-      "Cutting Range": "6mm to 40mm",
-      "Motor Power": "4kw",
-      "Motor Speed": "2800",
-      Voltage: "380Volt",
-      "Total Weight": "300 KG (Approx)",
-    },
-  },
-  {
-    id: 3,
-    badge: "New Arrival",
-    name: "CONCRETE MIXER MACHINE",
-    image: "/feature2.webp",
-    details: {
-      Capacity: "200 Litre",
-      "Motor Power": "2kw",
-      "Motor Speed": "1400",
-      Voltage: "220Volt",
-      "Total Weight": "180 KG (Approx)",
-    },
-  },
-  {
-    id: 4,
-    badge: "New Arrival",
-    name: "CONCRETE MIXER MACHINE",
-    image: "/home/ctaimg1.webp",
-    details: {
-      Capacity: "200 Litre",
-      "Motor Power": "2kw",
-      "Motor Speed": "1400",
-      Voltage: "220Volt",
-      "Total Weight": "180 KG (Approx)",
-    },
-  },
+},
+
+{
+  id: 5,
+  badge: "New Arrival",
+  name: "Anti-Fog Cannon Machine",
+  image: "/products/asg/Anti-Fog-Cannon-Machine/1.webp",
+  details: {
+    "Model": "RB-700",
+    "Throw Range": "25 metre",
+    "Automation Grade": "Semi Automatic",
+    "Material": "Mild Steel",
+    "Mounting": "Trolley",
+    "Water Pump Power": "2 HP",
+    "Rotation Angle": "90°",
+    "Elevation Angle": "60°",
+    "Dimension (L x W x H)": "8x5x6",
+    "Colour": "Yellow & Green"
+  }
+}
+,
+{
+  id: 16,
+  badge: "Best Seller",
+  name: "Concrete Mixer",
+  image: "/products/cm/CONCRETE MIXER/1.webp",
+  details: {
+    "Model": "SSI-MX-04",
+    "Capacity": "10/7 Cft. / One Bag",
+    "Motor": "5HP (Compton/Kirloskar)",
+    "Pneumatic Wheels": "4pcs",
+    "Engine": "6.5HP (Kirloskar)",
+    "Special Feature": "Heavy Duty Along with Wheel",
+    "Drum Size": "10mm-8mm-4mm",
+    "Drum Capacity": "560 Ltr (Approx)"
+  }
+},
+{
+  id: 52,
+  badge: "Hot Selling",
+  name: "Ride On Roller",
+  image: "/products/ror/RIDE ON ROLLER/1.webp",
+  details: {
+    "Model": "SSI-SMT-700",
+    "Walking/Driving Speed": "0-4 Km/H",
+    "Centrifugal Force": "25 KN",
+    "Driving Motor": "Hydraulic",
+    "Vibration Frequency": "70 HZ",
+    "Water Tank Capacity": "15 L",
+    "Weight": "700 Kg Approx",
+    "Power Source": "Diesel Engine / Petrol Engine (Optional)",
+    "Automation Grade": "Ride On Hydraulic Control",
+    "Brand": "SSI"
+  }
+}
+
+
+
+
+
+ 
 ];
 
 const Page = () => {
@@ -91,7 +118,7 @@ const Page = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-yellow-600/40" />
           <Image
             className="hidden md:block absolute right-38 z-100 animate-bounce top-33"
-            src="/home/round.png"
+            src="/home/round.webp"
             alt="Round Image"
             width={150}
             height={500}
@@ -367,11 +394,11 @@ const Page = () => {
               </button>
             </div>
 
-            <div className="bg-black text-white p-6 md:p-10 rounded-xl border-2 border-yellow-600 shadow-lg">
+            <div className="bg-black text-white p-6 md:p-8 rounded-xl border-2 border-yellow-600 shadow-lg">
               <h2 className="text-2xl md:text-3xl font-bold mb-5 text-center">
                 {product.name}
               </h2>
-              <div className="grid grid-cols-2 gap-y-4 text-base md:text-lg">
+              <div className="grid grid-cols-2 gap-y-2 text-base md:text-md">
                 {Object.entries(product.details).map(([key, value]) => (
                   <React.Fragment key={key}>
                     <p>{key}</p>
@@ -380,12 +407,13 @@ const Page = () => {
                 ))}
               </div>
               <div className="flex gap-4 mt-8 justify-center">
-                <button className="bg-[#FAAC18] text-white font-semibold px-6 py-3 rounded hover:bg-[#e99b10] transition">
-                  Inquiry
+                <Link href="/contact-us">
+                   <button className="bg-[#FAAC18] cursor-pointer text-white font-semibold px-6 py-3 rounded hover:bg-[#e99b10] transition">
+                  Inquire Now
                 </button>
-                <button className="border bg-white border-[#FAAC18] text-[#FAAC18] font-semibold px-6 py-3 rounded hover:text-black transition">
-                  Learn More
-                </button>
+                </Link>
+             
+            
               </div>
             </div>
           </div>

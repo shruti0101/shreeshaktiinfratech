@@ -1,19 +1,25 @@
 'use client'
 import { useState } from 'react'
-import Popup from '@/components/Popup'
+import Enquiry from '../Enquiry';
+
 const Stickybutton = () => {
-    const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <>
-      {isFormOpen && <Popup isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />}
-      <div className="fixed z-50 right-0 top-1/4 flex flex-col items-center gap-2 z-20">
-        <button onClick={() => setIsFormOpen(true)} className="bg-[#FAAC18] text-white font-semibold px-3 py-5 text-lg shadow-md">
-          Inquiry
-        </button>
-      </div>
-  
-  </>
+  <div className="fixed top-1/3 right-0 z-50 transform -translate-y-1/2">
+  <button
+    onClick={() => setIsFormOpen(true)}
+    className="bg-[#FAAC18] text-white cursor-pointer font-semibold px-4 py-2 text-lg shadow-md rounded-tl-md rounded-bl-md -rotate-90 origin-bottom-right"
+  >
+    Inquiry
+  </button>
+</div>
+
+
+      {isFormOpen && <Enquiry isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />}
+    </>
   )
 }
-// onClick={() => setIsFormOpen(true)}
+
 export default Stickybutton

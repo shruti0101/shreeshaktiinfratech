@@ -3,7 +3,8 @@ import ProductDetailClient from "./ProductDetailClient";
 
 // ✅ Dynamic SEO metadata
 export async function generateMetadata({ params }) {
-  const product = products.find((p) => p.slug === params.slug);
+  const { slug } = params;
+  const product = products.find((p) => p.slug === slug);
 
   if (!product) {
     return {
@@ -12,36 +13,54 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  return {
+  // Handle product images safely
+  const images =
+    product.images && product.images.length > 0
+      ? product.images.map((img) => ({
+          url: typeof img === "string" ? img : img.src,
+          alt: typeof img === "string" ? product.name : img.alt || product.name,
+        }))
+      : [
+          {
+            url:
+              typeof product.image === "string"
+                ? product.image
+                : product.image?.src || "/default-image.jpg",
+            alt:
+              typeof product.image === "string"
+                ? product.name
+                : product.image?.alt || product.name,
+          },
+        ];
 
-    
+  return {
     title: product.metaTitle || product.name,
     description: product.metaDescription || product.description,
     openGraph: {
       title: product.metaTitle || product.name,
       description: product.metaDescription || product.description,
-      images: product.images?.length
-        ? product.images.map((img) => ({ url: img.src, alt: img.alt }))
-        : [{ url: product.image.src, alt: product.image.alt }],
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title: product.metaTitle || product.name,
       description: product.metaDescription || product.description,
-      images: product.images?.length
-        ? product.images.map((img) => ({ url: img.src, alt: img.alt }))
-        : [{ url: product.image.src, alt: product.image.alt }],
+      images,
     },
   };
 }
 
 export default function ProductPage({ params }) {
-  const product = products.find((p) => p.slug === params.slug);
+  const { slug } = params;
+  const product = products.find((p) => p.slug === slug);
 
   if (!product) return <p className="p-10">Product not found</p>;
 
   const relatedProducts = products
     .filter((p) => p.category === product.category && p.slug !== product.slug)
-    .slice(0, 8); // limit to 8 (adjust as needed)
-  return <ProductDetailClient product={product} relatedProducts={relatedProducts} />;
+    .slice(0, 8);
+
+  return (
+    <ProductDetailClient product={product} relatedProducts={relatedProducts} />
+  );
 }

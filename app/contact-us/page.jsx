@@ -20,7 +20,7 @@ const page = () => {
 
           <Image
             className="hidden md:block absolute  right-38 z-100 animate-bounce top-30"
-            src="/home/round.png"
+            src="/home/round.webp"
             alt="Round Image"
             width={150}
             height={500}
@@ -128,9 +128,14 @@ const page = () => {
                 <select className="border rounded-md px-4 py-2 w-full bg-[#FAAC18] text-white font-semibold">
                   <option>Product Requirement</option>
                   <option>Bar Bending Machine</option>
-                  <option>Bar Cutting Machine</option>
                   <option>Concrete Mixer</option>
-                  <option>Hoist Machine</option>
+                  <option>Material Lifting</option>
+                  <option>Safety Instruments</option>
+                    <option>Trolley and  Vibrator</option>
+                   <option>Surveying Equipments</option>
+                     <option>Lab Testing Equipments</option>
+                      <option>Ride On Roller Machines</option>
+                       <option>Anti Smog Gun </option>
                 </select>
               </div>
               <input

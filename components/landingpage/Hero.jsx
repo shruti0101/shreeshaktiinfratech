@@ -17,19 +17,20 @@ const images = [
   {
     id: 2,
     src: "/home/hero2.webp",
-    title: "Cutting Machines",
+    title: "Monkey Lifting Machines",
     subtitle: "Automatic & Manual",
     description:
-      "High precision cutting machines available in automatic and manual versions for all industries.",
+      "High precision lifting machines available in automatic and manual versions for all industries.",
   },
-  {
-    id: 3,
-    src: "/home/hero3.webp",
-    title: "Hydraulic Machines",
-    subtitle: "Heavy Duty",
-    description:
-      "Durable hydraulic machines built for heavy-duty applications with top efficiency.",
-  },
+{
+  id: 3,
+  src: "/home/banner-1.webp",
+  title: "Anti Smog Gun",
+  subtitle: "Heavy Duty",
+  description:
+    "High-performance Anti Smog Gun designed for heavy-duty operations, ensuring long-lasting durability and superior efficiency in smoke and particulate removal.",
+},
+
   {
     id: 4,
     src: "/home/hero4.webp",
@@ -55,7 +56,7 @@ const AccordionHero = () => {
   // ✅ Mobile view → Swiper Carousel with autoplay
   if (isMobile) {
     return (
-      <div className="h-[68vh] w-full">
+      <div className="h-[70vh] w-full">
         <Swiper
           spaceBetween={10}
           slidesPerView={1}
@@ -68,7 +69,7 @@ const AccordionHero = () => {
         >
           {images.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="relative  h-[68vh] w-full">
+              <div className="relative  h-[70vh] w-full">
                 <img
                   src={item.src}
                   alt={item.title}
@@ -90,9 +91,7 @@ const AccordionHero = () => {
                       Request a Quote →
                     </Link>
 
-                    <button className="bg-[#FAAC18] px-4 py-3 rounded-lg text-black font-semibold hover:bg-yellow-500 transition cursor-pointer">
-                      Contact Us
-                    </button>
+                 
                   </div>
                 </div>
               </div>
@@ -161,12 +160,13 @@ const AccordionHero = () => {
               </p>
               <p className="mt-6 max-w-lg text-lg">{item.description}</p>
               <div className="mt-8 flex gap-4">
-                <button className="bg-white px-4 py-3 rounded-lg text-black font-semibold hover:text-[#FAAC18] transition text-lg cursor-pointer">
-                  Request a Quote →
-                </button>
-                <Link href="/contact-us" className="bg-[#FAAC18] px-4 py-3 rounded-lg text-black font-semibold hover:bg-yellow-500 transition cursor-pointer">
-                  Contact Us
-                </Link>
+                <Link
+                      href="/contact-us"
+                      className="bg-white px-4 py-3 rounded-lg text-black font-semibold hover:text-[#FAAC18] transition text-lg cursor-pointer inline-block"
+                    >
+                      Request a Quote →
+                    </Link>
+             
               </div>
             </div>
           </div>

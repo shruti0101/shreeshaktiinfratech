@@ -30,8 +30,18 @@ export default function BlogsPage() {
   return (
     <>
       <Navbar />
+   <section className="relative w-full h-[400px] md:h-[400px] flex items-center justify-center overflow-hidden">
 
-      <div className="max-w-6xl mx-auto p-6 md:mt-25">
+ 
+
+        <div
+          className="absolute inset-0 bg-fixed bg-center bg-cover bg-no-repeat flex items-center justify-center"
+          style={{ backgroundImage: "url('/home/hero4.webp')" }}
+        >
+          <h1 className="text-7xl font-bold text-white z-10">Blogs</h1>
+        </div>
+      </section>
+      <div className="max-w-6xl mx-auto p-6 md:mt-10">
         <h1 className="text-4xl font-bold mb-12 text-center">🔍 Explore Our Blogs</h1>
 
         {/* Loader */}

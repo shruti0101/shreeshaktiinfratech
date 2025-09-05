@@ -8,9 +8,22 @@ export default function PopupForm({ onClose }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 3000); // show popup after 2s
+    }, 3000); 
     return () => clearTimeout(timer);
   }, []);
+
+
+  const categories = [
+  { id: "bar-processing-machines", name: "Bar Processing Machines", image: "/products/automaticbarmachine.png" },
+  { id: "concrete-mixers", name: "Concrete Mixers" },
+  { id: "anti-fog-cannon-machine", name: "Anti-Fog Cannon Machine", image: "/products/asg2.webp" },
+  { id: "lab-testing-equipment", name: "Lab Testing Equipment" },
+  { id: "material-lifting-equipment", name: "Material Lifting Equipment" },
+  { id: "safety-instrument", name: "Safety Instruments" },
+  { id: "ride-on-roller-plate-compactor", name: "RIDE ON ROLLER / PLATE COMPACTOR" },
+  { id: "surveying-instrument", name: "Surveying Instruments" },
+  { id: "trolley-vibrator", name: "Trolley Vibrator" },
+];
 
   if (!isOpen) return null;
 
@@ -20,7 +33,7 @@ export default function PopupForm({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-1000">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-3000">
       <div className="relative bg-white w-full max-w-md px-16 p-6 rounded-lg shadow-lg">
         {/* Top-left Image */}
         <Image
@@ -51,10 +64,22 @@ export default function PopupForm({ onClose }) {
 
         {/* Form */}
         <form
-          action="https://formsubmit.co/YOUR_EMAIL_HERE"
+          action="https://formsubmit.co/shreeshaktiinfratech@gmail.com"
           method="POST"
           className="space-y-3"
         >
+
+
+               <input type="hidden" name="_sponsor" value="false" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New Enquiry from Website" />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank you for reaching out! We will get back to you shortly."
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_cc" value="shrutiguptabhu@gmail.com" />
           {/* Name */}
           <input
             type="text"
@@ -88,10 +113,12 @@ export default function PopupForm({ onClose }) {
             required
             className="w-full p-3 rounded-md bg-[#FAAC18] border border-gray-300 focus:outline-none"
           >
-            <option value="">Select Machine</option>
-            <option value="Bar Bending Machine">Bar Bending Machine</option>
-            <option value="Bar Cutting Machine">Bar Cutting Machine</option>
-            <option value="Other">Other</option>
+        <option value="">Select Product</option>
+              {categories.map((cat) => (
+                <option key={cat.id} value={cat.name}>
+                  {cat.name}
+                </option>
+              ))}
           </select>
 
           {/* Message */}
@@ -105,11 +132,7 @@ export default function PopupForm({ onClose }) {
           {/* Hidden FormSubmit fields */}
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://yourwebsite.com/thank-you"
-          />
+        
 
           {/* Submit Button */}
           <button

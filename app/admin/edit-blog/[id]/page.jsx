@@ -38,7 +38,7 @@ export default function EditBlog() {
     }
   };
 
-  if (!blog) return <p className="p-6">Loading…</p>;
+  if (!blog) return <p className="p-6  text-center text-gray-500 text-4xl">Loading…</p>;
 
   return (
     <div className="min-h-screen flex bg-gray-100">

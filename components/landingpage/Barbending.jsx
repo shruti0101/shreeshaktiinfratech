@@ -7,7 +7,7 @@ const Barbending = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
           {/* Background Rectangle */}
           <Image
-            src="/about-rect.png"
+            src="/home/about-rect.webp"
             width={600}
             height={200}
             alt="Background rectangle"

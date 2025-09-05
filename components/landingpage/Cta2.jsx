@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const Cta2 = () => {
   return (
     <div>
@@ -29,10 +29,15 @@ const Cta2 = () => {
 
              {/* CTA Button */}
       <div className="flex justify-center">
+
+
+        <Link href="/contact-us">
+        
         <button className="bg-[#fef3c7] text-xl border-2 my-10 cursor-pointer font-bold py-2 px-4 border-yellow-500 hover:underline hover:scale-105 transition-all duration-300 ease-out">
         Get Free Consultation Today!{" "}
        
         </button>
+        </Link>
       </div>
         </div>
       </section>

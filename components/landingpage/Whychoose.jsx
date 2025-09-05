@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 // import { ArrowRight } from "lucide-react";
 import { Wrench, ShieldCheck, Layers, Home, Headphones, Truck } from "lucide-react"; 
 
@@ -74,10 +75,16 @@ const features = [
 
       {/* Button */}
       <div className="flex items-center gap-4">
+
+
+<Link href="/about-us">
+
         <button className="group relative overflow-hidden px-6 py-3 rounded-full bg-yellow-500 text-black font-semibold transition-all duration-300 hover:bg-yellow-400 hover:scale-105">
           <span className="relative z-10">Learn More</span>
           <div className="absolute inset-0 bg-yellow-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
         </button>
+</Link>
+
 
         {/* Mobile image */}
         <div className="block md:hidden">
@@ -108,7 +115,7 @@ const features = [
 
 
 <section
-  className="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-12"
+  className="max-w-7xl mx-auto md:py-5 px-4 sm:px-6 lg:px-12"
 
 >
   <div className="grid  mb-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

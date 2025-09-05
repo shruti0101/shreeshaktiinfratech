@@ -3,6 +3,21 @@ import React from "react";
 import Image from "next/image";
 
 const Cta = () => {
+
+
+
+  const categories = [
+  { id: "bar-processing-machines", name: "Bar Processing Machines", image: "/products/automaticbarmachine.png" },
+  { id: "concrete-mixers", name: "Concrete Mixers" },
+  { id: "anti-fog-cannon-machine", name: "Anti-Fog Cannon Machine", image: "/products/asg2.webp" },
+  { id: "lab-testing-equipment", name: "Lab Testing Equipment" },
+  { id: "material-lifting-equipment", name: "Material Lifting Equipment" },
+  { id: "safety-instrument", name: "Safety Instruments" },
+  { id: "ride-on-roller-plate-compactor", name: "RIDE ON ROLLER / PLATE COMPACTOR" },
+  { id: "surveying-instrument", name: "Surveying Instruments" },
+  { id: "trolley-vibrator", name: "Trolley Vibrator" },
+];
+
   return (
     <>
    
@@ -39,24 +54,24 @@ const Cta = () => {
               width={500}
               height={400}
               className="object-contain"
+              unoptimized
             />
           </div>
 
           {/* Right Side - Form */}
           <div className="bg-white shadow-md border border-gray-200 rounded-lg p-3 md:p-6">
             <form
-              action="https://formsubmit.co/YOUR_EMAIL_HERE"
+              action="https://formsubmit.co/shreeshaktiinfratech@gmail.com"
               method="POST"
               className="space-y-2 md:space-y-4"
             >
               {/* Disable captcha (optional) */}
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_sponsor" value="false"/>
+                <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_subject" value="New Enquiry from Website" />
               {/* Redirect after submission */}
-              <input
-                type="hidden"
-                name="_next"
-                value="https://yourdomain.com/thank-you"
-              />
+          
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
@@ -88,13 +103,13 @@ const Cta = () => {
                   required
                   className="w-full bg-[#FAAC18] border border-gray-300 rounded-md p-3 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 hover:bg-yellow-500"
                 >
-                  <option value="">Product Requirement</option>
-                  <option value="Bar Bending Machine">
-                    Bar Bending Machine
-                  </option>
-                  <option value="Concrete Mixer">Concrete Mixer</option>
-                  <option value="Other">Other</option>
-                </select>
+                   <option value="">Select Product</option>
+              {categories.map((cat) => (
+                <option key={cat.id} value={cat.name}>
+                  {cat.name}
+                </option>
+              ))}
+              </select>
               </div>
 
               <input

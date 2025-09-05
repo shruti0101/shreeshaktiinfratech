@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import Link from "next/link";
 
   const steps = [
     {
@@ -86,10 +86,15 @@ export default function ProcessSection() {
 
       {/* CTA Button */}
       <div className="flex justify-center">
+
+<Link href="/contact-us">
+
         <button className="bg-[#fef3c7] text-xl border-2 my-10 cursor-pointer font-bold py-2 px-4 border-yellow-500 hover:underline hover:scale-105 transition-all duration-300 ease-out">
           Get Your Bar Bending Machine{" "}
           <span className="text-[#FAAC18]">Now! ➝</span>
         </button>
+</Link>
+
       </div>
     </section>
 

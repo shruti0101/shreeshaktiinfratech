@@ -6,49 +6,49 @@ const Productcategory = () => {
   const categories = [
     {
       name: "Bar Bending Machines",
-      products: 9,
+      products: 30,
       img: "/home/productdesc/productdesc1.webp",
       hoverImg: "/steel.webp",
     },
     {
       name: "Concrete Mixers",
-      products: 14,
+      products: 24,
       img: "/home/productdesc/productdesc2.webp",
       hoverImg: "/home/productdesc/actual/concrete.webp",
     },
     {
       name: "Trolly Vibrator",
-      products: 13,
+      products: 21,
       img: "/home/productdesc/productdesc3.webp",
       hoverImg: "/home/productdesc/actual/trollyvibrator.webp",
     },
     {
       name: "Ride on Roller/ Plate Compactor",
-      products: 13,
+      products: 26,
       img: "/home/productdesc/productdesc4.webp",
       hoverImg: "/home/productdesc/actual/rideoncollar.webp",
     },
     {
       name: "Material Lifting",
-      products: 6,
+      products: 37,
       img: "/home/productdesc/productdesc5.webp",
       hoverImg: "/home/productdesc/actual/materiallifting.webp",
     },
     {
       name: "Lab Testing Equipments",
-      products: 10,
+      products: 17,
       img: "/home/productdesc/productdesc6.webp",
       hoverImg: "/home/productdesc/actual/labtesting.webp",
     },
     {
       name: "Safety Instruments",
-      products: 8,
+      products: 18,
       img: "/home/productdesc/productdesc7.webp",
       hoverImg: "/home/productdesc/actual/safetyinstrument.webp",
     },
     {
       name: "Surveying Instruments",
-      products: 5,
+      products: 18,
       img: "/home/productdesc/productdesc8.webp",
       hoverImg: "/home/productdesc/actual/surveyinginstrument.webp",
     },
@@ -56,11 +56,11 @@ const Productcategory = () => {
 
   return (
     <div className="max-w-7xl mx-auto mb-15 px-6 md:px-12">
-      <h2 className="text-xl md:text-5xl mb-14 font-bold text-[#FAAC18] text-center ">
+      <h2 className="text-3xl md:text-5xl mb-8 md:mb-14 font-bold text-[#FAAC18] text-center ">
         Product Categories
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {categories.map((cat, i) => (
           <div
             key={i}

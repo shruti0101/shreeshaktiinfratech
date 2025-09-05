@@ -39,13 +39,7 @@ const ClientsSpeak = () => {
           precision, efficiency, and lasting results — straight from the people
           who use them every day.
         </p>
-        <button className="mt-7 group cursor-pointer flex items-center gap-2 bg-black text-white px-3 md:px-4 py-3 rounded-full transition-all duration-300 ease-out hover:bg-gray-900 hover:shadow-lg hover:shadow-black/30 hover:scale-105">
-          <span className="relative z-10">Learn More</span>
-          <ArrowRight
-            size={15}
-            className="bg-white w-4 h-4 md:w-6 md:h-6 text-black rounded-full transform transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </button>
+     
       </div>
 
       {/* Right Section (Infinite Auto Scroll Testimonials) */}

@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import AOSWrapper from "@/components/aos/AOSWrapper";
+import { ShieldCheck, Layers, Headphones } from "lucide-react";
+import Link from "next/link";
 export default function AboutSection() {
   return (
 
@@ -52,13 +54,19 @@ export default function AboutSection() {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <button className="group cursor-pointer flex items-center gap-2 bg-black text-white px-3 md:px-4 py-3 rounded-full transition-all duration-300 ease-out hover:bg-gray-900 hover:shadow-lg hover:shadow-black/30 hover:scale-105">
+
+<Link href="/about-us">
+  <button className="group cursor-pointer flex items-center gap-2 bg-black text-white px-3 md:px-4 py-3 rounded-full transition-all duration-300 ease-out hover:bg-gray-900 hover:shadow-lg hover:shadow-black/30 hover:scale-105">
+          
             <span className="relative z-10">Learn More</span>
             <ArrowRight
               size={15}
               className="bg-white w-4 h-4 md:w-6 md:h-6 text-black rounded-full transform transition-transform duration-300 group-hover:translate-x-1"
             />
           </button>
+</Link>
+
+        
 
           <div className="block md:hidden">
             <Image
@@ -89,7 +97,7 @@ export default function AboutSection() {
     </div>
 
     {/* Bottom Cards */}
-    <div className="hidden md:grid relative mx-auto mb-4 max-w-7xl grid-cols-1 md:grid-cols-3 gap-6 px-4">
+   <div className="hidden md:grid relative mx-auto mb-4 max-w-7xl grid-cols-1 md:grid-cols-3 gap-6 px-4">
       {/* Card 1 */}
       <div
         className="group border border-gray-300 flex flex-col items-center text-center p-6 bg-white shadow rounded-lg transition-all duration-300 hover:bg-[#FAAC18]"
@@ -97,11 +105,8 @@ export default function AboutSection() {
         data-aos-delay="100"
       >
         <div className="bg-yellow-300 flex items-center justify-center rounded-full w-12 h-12 mb-4 transition-all duration-300 group-hover:bg-black">
-          <Image
-            src="/home/vector.png"
-            alt="Rebar Machine"
-            width={22}
-            height={16}
+          <ShieldCheck
+            size={22}
             className="transition duration-300 group-hover:invert group-hover:brightness-0 group-hover:contrast-200"
           />
         </div>
@@ -121,11 +126,8 @@ export default function AboutSection() {
         data-aos-delay="200"
       >
         <div className="bg-yellow-300 flex items-center justify-center rounded-full w-12 h-12 mb-4 transition-all duration-300 group-hover:bg-black">
-          <Image
-            src="/home/vector-2.webp"
-            alt="Rebar Machine"
-            width={22}
-            height={16}
+          <Layers
+            size={22}
             className="transition duration-300 group-hover:invert group-hover:brightness-0 group-hover:contrast-200"
           />
         </div>
@@ -145,11 +147,8 @@ export default function AboutSection() {
         data-aos-delay="300"
       >
         <div className="bg-yellow-300 flex items-center justify-center rounded-full w-12 h-12 mb-4 transition-all duration-300 group-hover:bg-black">
-          <Image
-            src="/home/vector-1.png"
-            alt="Rebar Machine"
-            width={22}
-            height={16}
+          <Headphones
+            size={22}
             className="transition duration-300 group-hover:invert group-hover:brightness-0 group-hover:contrast-200"
           />
         </div>

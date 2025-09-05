@@ -8,7 +8,7 @@ export default function PopupForm({ onClose }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 3000); 
+    }, 5000); 
     return () => clearTimeout(timer);
   }, []);
 

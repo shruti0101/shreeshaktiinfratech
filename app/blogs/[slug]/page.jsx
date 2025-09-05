@@ -31,22 +31,22 @@ export default async function BlogPage({ params }) {
     <>
       <Navbar />
 
-        <section className="relative w-full h-[280px] md:h-[400px] flex items-center justify-center overflow-hidden ">
+      <section className="relative w-full h-[280px] md:h-[400px] flex items-center justify-center overflow-hidden ">
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover flex flex-col items-center justify-center text-center "
           style={{ backgroundImage: "url('/home/bg-footer.webp')" }}
         >
-          <h1 className="text-white  text-3xl md:text-6xl font-bold">
+          <h1 className="text-white mt-10 text-3xl md:text-6xl font-bold">
             {blog.title}
           </h1>
-       
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto flex gap-15 my-20">
+      {/* ✅ Responsive Blog Layout */}
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 my-10 px-4 md:px-6">
         {/* LEFT: Blog Content */}
         <main className="flex-1">
-          <h1 className="text-4xl font-bold mb-3">{blog.title}</h1>
+          <h1 className="text-2xl md:text-4xl font-bold mb-3">{blog.title}</h1>
           <p className="text-gray-600 mb-6">{blog.metaDescription}</p>
 
           {blog.image && (
@@ -71,8 +71,8 @@ export default async function BlogPage({ params }) {
 
         {/* RIGHT: Featured Blogs Sidebar */}
         {relatedBlogs.length > 0 && (
-          <aside className="w-full md:w-50 lg:w-85 shrink-0">
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">
+          <aside className="w-full lg:w-80 shrink-0 mt-10 lg:mt-0">
+            <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-800">
               🌟 Featured Blogs
             </h2>
 

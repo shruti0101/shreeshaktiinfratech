@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import { FaUser, FaEnvelope, FaPhone, FaIndustry, FaRegCommentDots } from "react-icons/fa";
 
 const categories = [
-  { id: "bar-processing-machines", name: "Bar Processing Machines", image: "/products/automaticbarmachine.png" },
+  { id: "bar-processing-machines", name: "Bar Processing Machines" },
   { id: "concrete-mixers", name: "Concrete Mixers" },
-  { id: "anti-fog-cannon-machine", name: "Anti-Fog Cannon Machine", image: "/products/asg2.webp" },
+  { id: "anti-fog-cannon-machine", name: "Anti-Fog Cannon Machine" },
   { id: "lab-testing-equipment", name: "Lab Testing Equipment" },
   { id: "material-lifting-equipment", name: "Material Lifting Equipment" },
   { id: "safety-instrument", name: "Safety Instruments" },
@@ -33,98 +34,98 @@ const Enquiry = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-[3000]">
-      <div className="bg-white rounded-2xl shadow-2xl w-[90%] max-w-lg relative overflow-hidden">
-        {/* Decorative Header */}
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-20 w-full"></div>
-
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-3 text-black hover:text-red-500 transition text-2xl font-bold"
-        >
-          ✕
-        </button>
+    <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-[3000]">
+      <div className="bg-white rounded-2xl shadow-2xl w-[90%] max-w-xl relative overflow-hidden border border-gray-200">
+        
+        {/* Header */}
+        <div className="bg-[#FFAC18] h-13 w-full flex items-center justify-between px-6">
+          <h2 className="text-2xl font-bold text-white tracking-wide">📩 Enquiry Form</h2>
+          <button
+            onClick={onClose}
+            className="text-white text-2xl hover:text-red-400 transition"
+          >
+            ✕
+          </button>
+        </div>
 
         {/* Content */}
-        <div className="p-6">
-          <h2 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
-            Enquiry Form
-          </h2>
-
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            {/* Hidden Inputs */}
-            <input type="hidden" name="_sponsor" value="false" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="New Enquiry from Website" />
-            <input
-              type="hidden"
-              name="_autoresponse"
-              value="Thank you for reaching out! We will get back to you shortly."
-            />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_cc" value="shrutiguptabhu@gmail.com" />
-
+        <div className="p-4 bg-gradient-to-br from-gray-50 to-white">
+          <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* Name */}
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            />
+            <div className="flex items-center border rounded-lg px-4 py-3 bg-white shadow-sm focus-within:ring-2 focus-within:ring-yellow-500">
+              <FaUser className="text-gray-500 mr-3" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name *"
+                required
+                className="w-full focus:outline-none text-gray-700"
+              />
+            </div>
 
             {/* Email */}
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            />
+            <div className="flex items-center border rounded-lg px-4 py-3 bg-white shadow-sm focus-within:ring-2 focus-within:ring-yellow-500">
+              <FaEnvelope className="text-gray-500 mr-3" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Business Email *"
+                required
+                className="w-full focus:outline-none text-gray-700"
+              />
+            </div>
 
             {/* Phone */}
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Your Phone"
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            />
+            <div className="flex items-center border rounded-lg px-4 py-3 bg-white shadow-sm focus-within:ring-2 focus-within:ring-yellow-500">
+              <FaPhone className="text-gray-500 mr-3" />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                className="w-full focus:outline-none text-gray-700"
+              />
+            </div>
 
             {/* Product Dropdown */}
-            <select
-              name="product"
-              required
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            >
-              <option value="">Select Product</option>
-              {categories.map((cat) => (
-                <option key={cat.id} value={cat.name}>
-                  {cat.name}
-                </option>
-              ))}
-            </select>
+            <div className="flex items-center border rounded-lg px-4 py-3 bg-white shadow-sm focus-within:ring-2 focus-within:ring-yellow-500">
+              <FaIndustry className="text-gray-500 mr-3" />
+              <select
+                name="product"
+                required
+                className="w-full bg-transparent focus:outline-none text-gray-700"
+              >
+                <option value="">Select Product *</option>
+                {categories.map((cat) => (
+                  <option key={cat.id} value={cat.name}>
+                    {cat.name}
+                  </option>
+                ))}
+              </select>
+            </div>
 
             {/* Message */}
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="4"
-              required
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            ></textarea>
+            <div className="flex items-start border rounded-lg px-4 py-3 bg-white shadow-sm focus-within:ring-2 focus-within:ring-yellow-500">
+              <FaRegCommentDots className="text-gray-500 mt-1 mr-3" />
+              <textarea
+                name="message"
+                placeholder="Your Message *"
+                rows="4"
+                required
+                className="w-full focus:outline-none text-gray-700"
+              ></textarea>
+            </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white text-lg font-semibold py-3 rounded-lg shadow-md hover:from-yellow-500 hover:to-orange-500 hover:scale-[1.02] transition"
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-lg font-semibold py-3 rounded-lg shadow-md hover:from-yellow-600 hover:to-orange-600 hover:scale-[1.02] transition"
             >
-              Submit Enquiry
+              🚀 Submit Enquiry
             </button>
           </form>
 
           {submitted && (
-            <p className="text-green-600 font-semibold text-center mt-4 animate-pulse">
+            <p className="text-green-600 font-semibold text-center mt-5 animate-pulse">
               ✅ Thank you! Your enquiry has been submitted.
             </p>
           )}

@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import React from 'react'
 import AOSWrapper from '../aos/AOSWrapper'
 
@@ -43,13 +44,18 @@ const Check = () => {
             <p className="text-lg md:text-2xl font-medium text-yellow-500">
               Delivering quality, innovation, and trust in every project we undertake.
             </p>
-            <button
-              className="px-6 py-3 bg-black text-white font-semibold rounded-2xl shadow-lg hover:bg-gray-900 transition"
+
+
+            <Link href="/products">
+                <button
+              className="px-6 py-3 cursor-pointer bg-black text-white font-semibold rounded-2xl shadow-lg hover:bg-gray-900 transition"
               data-aos="fade-up"
               data-aos-delay="400"
             >
               Learn More
             </button>
+            </Link>
+        
           </div>
 
           {/* Right Machine */}

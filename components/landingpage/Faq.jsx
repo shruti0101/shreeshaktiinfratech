@@ -75,11 +75,11 @@ const Faq = () => {
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-10">
         {/* Heading */}
         <h2
-          className="text-5xl font-bold mb-7 md:mb-10"
+          className="text-3xl  md:text-5xl font-bold md:my-12 mb-8"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          FAQ<span className="text-[#FAAC18]">'s</span>
+          Frequently Asked <span className="text-[#FAAC18]">Question's</span>
         </h2>
 
         {/* FAQ Grid */}
@@ -93,7 +93,7 @@ const Faq = () => {
             >
               {/* Question */}
               <button
-                className="flex justify-between items-center w-full text-left font-semibold text-sm md:text-lg"
+                className="flex justify-between items-center w-full text-left font-semibold text-md md:text-lg"
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}

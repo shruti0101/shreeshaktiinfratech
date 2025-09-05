@@ -74,7 +74,7 @@ export default function BlogsPage() {
 
                 {/* Blog Content */}
                 <div className="p-4 flex-1 flex flex-col">
-                  <h2 className="text-lg font-semibold mb-2 group-hover:text-blue-600 line-clamp-2">
+                  <h2 className="text-lg md:text-2xl font-semibold mb-2 group-hover:text-blue-600 line-clamp-2">
                     {blog.title}
                   </h2>
                   <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">

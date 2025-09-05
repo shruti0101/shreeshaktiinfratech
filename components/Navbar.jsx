@@ -73,7 +73,7 @@ const Navbar = () => {
               className="flex items-center gap-2 bg-[#FAAC18] font-bold text-lg cursor-pointer hover:bg-[#e99b10] text-white py-3 px-5 rounded transition duration-300"
             >
               Request a Quote
-              <Image src="/vector.png" alt="Arrow Icon" width={16} height={8} />
+            
             </button>
           </div>
 
@@ -141,7 +141,7 @@ const Navbar = () => {
                 className="w-full flex justify-center items-center gap-2 bg-[#FAAC18] font-bold text-lg cursor-pointer hover:bg-[#e99b10] text-white py-3 px-5 rounded transition duration-300"
               >
                 Request a Quote
-                <Image src="/vector.png" alt="Arrow Icon" width={16} height={8} />
+              
               </button>
             </li>
           </ul>

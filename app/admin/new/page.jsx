@@ -66,6 +66,8 @@ export default function NewBlog() {
               />
             </div>
 
+           
+
             {/* Permalink */}
             <div>
               <label className="block font-semibold mb-1">Permalink</label>

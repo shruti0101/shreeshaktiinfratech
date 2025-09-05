@@ -1,21 +1,25 @@
 'use client'
 import { useState } from 'react'
-import Enquiry from '../Enquiry';
+import Enquiry from '../Enquiry'
+import { FaWhatsapp, FaFacebookF, FaInstagram, FaEnvelope } from 'react-icons/fa'
 
 const Stickybutton = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false)
 
   return (
     <>
-  <div className="fixed top-1/3 right-0 z-50 transform -translate-y-1/2">
-  <button
-    onClick={() => setIsFormOpen(true)}
-    className="bg-[#FAAC18] text-white cursor-pointer font-semibold px-4 py-2 text-lg shadow-md rounded-tl-md rounded-bl-md -rotate-90 origin-bottom-right"
-  >
-    Inquiry
-  </button>
-</div>
+      {/* Floating Social + Inquiry Section */}
+      <div className="fixed top-1/2 right-0 z-50 flex flex-col items-center transform translate-y-1/1">
 
+   
+        {/* Inquiry Button */}
+        <button
+          onClick={() => setIsFormOpen(true)}
+          className="bg-[#FAAC18] text-white cursor-pointer font-semibold px-4 py-2 text-lg shadow-lg rounded-tl-md rounded-bl-md -rotate-90 origin-bottom-right hover:scale-105 transition mr-[-1px]"
+        >
+          Inquiry
+        </button>
+      </div>
 
       {isFormOpen && <Enquiry isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />}
     </>

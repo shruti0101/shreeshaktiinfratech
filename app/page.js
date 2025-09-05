@@ -17,13 +17,17 @@ import Productcategory from "@/components/landingpage/Productcategory";
 import Check from "@/components/landingpage/Check";
 import Popup from "@/components/Popup";
 import Footer from "@/components/landingpage/Footer";
+import Social from "@/components/landingpage/Social"
 export default function Home() {
   return (
     <>
+      <Stickybutton></Stickybutton>
+      <Social></Social>
+    
         <Navbar />
     <Popup></Popup>
       <AccordionHero></AccordionHero>
-      <Stickybutton></Stickybutton>
+  
     
       <About></About>
       <Bestseller></Bestseller>

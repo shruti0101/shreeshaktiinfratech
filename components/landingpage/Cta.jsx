@@ -30,6 +30,7 @@ const Cta = () => {
           width={300}
           height={200}
           className="hidden md:block absolute -left-20 top-0"
+          unoptimized
         />
       
         {/* Heading */}
@@ -54,7 +55,7 @@ const Cta = () => {
               width={500}
               height={400}
               className="object-contain"
-              unoptimized
+             
             />
           </div>
 

@@ -6,7 +6,7 @@ const SocialBar = () => {
     <div className="hidden md:flex fixed top-1/3 right-0 z-50 flex-col items-center space-y-3">
       {/* WhatsApp */}
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/+918826544443"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex items-center w-44 translate-x-[130px] hover:translate-x-0 rounded-l-lg bg-white text-green-600 shadow-md border border-gray-200 transition-all duration-300"
@@ -21,7 +21,7 @@ const SocialBar = () => {
 
       {/* Instagram */}
       <a
-        href="https://instagram.com"
+        href="https://www.instagram.com/shree_shakti_infratech/"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex items-center w-44 translate-x-[130px] hover:translate-x-0 rounded-l-lg bg-white text-pink-600 shadow-md border border-gray-200 transition-all duration-300"
@@ -36,7 +36,7 @@ const SocialBar = () => {
 
       {/* Email */}
       <a
-        href="mailto:info@example.com"
+        href="mailto:shreeshaktiinfratech@gmail.com"
         className="group relative flex items-center w-44 translate-x-[130px] hover:translate-x-0 rounded-l-lg bg-white text-gray-700 shadow-md border border-gray-200 transition-all duration-300"
       >
         <div className="flex items-center gap-3 px-4 py-3">

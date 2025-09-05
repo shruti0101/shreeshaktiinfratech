@@ -53,7 +53,7 @@ export default function ProductsPage() {
 
       <section className="px-6 py-10">
         {/* Tabs */}
-        <div className="sticky top-[110px] z-20 bg-white border-b">
+        <div className="sticky top-[100px] z-20 bg-white border-b">
           <div className="flex overflow-x-auto scrollbar-hide md:justify-center">
             {tabs.map((tab) => (
               <button
